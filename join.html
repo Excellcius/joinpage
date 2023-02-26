@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Our Membership Program</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Set the form and table to display vertically */
+        form,
+        table {
+            display: flex;
+            flex-direction: column;
+        }    
+		/* Style the form labels and inputs */
+    label,
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select,
+    textarea {
+        margin-bottom: 20px;
+    }
+    
+    /* Add spacing between table cells */
+    table {
+        border-spacing: 10px;
+    }
+    
+    /* Align table headers to the left */
+    th {
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <!-- Navigation Menu -->
+    </header>
+    <main>
+        <h1>Membership Application</h1>
+        <form method="get" action="thankyou.html">
+            <label for="fname">First Name<span class="required">*</span></label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Last Name<span class="required">*</span></label>
+            <input type="text" id="lname" name="lname" required>
+            <label for="position">Business Position Title</label>
+            <input type="text" id="position" name="position" pattern="[A-Za-z\s\-]{7,}">
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@example.com">
+            <label for="phone">Cell Phone Number<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="business">Business Name/Title<span class="required">*</span></label>
+            <input type="text" id="business" name="business" required>
+            <label for="membership">Membership Level</label>
+            <select id="membership" name="membership">
+                <option value="Basic Membership">Basic Membership</option>
+                <option value="Premium Membership">Premium Membership</option>
+                <option value="Deluxe Membership">Deluxe Membership</option>
+            </select>
+            <label for="description">Business Description</label>
+            <textarea id="description" name="description"></textarea>
+            <input type="hidden" id="date" name="date" value="<?php echo date('Y-m-d H:i:s'); ?>">
+            <input type="submit" value="Submit">
+        </form>
+    <table>
+        <tbody>
+            <tr>
+                <th>Feature 1  </th>
+                <th>Feature 2  </th>
+				<th>Feature 3 </th>
+            </tr>
+            <tr>
+                <th> Basic </th>
+				<td> ✔ </td>
+                <td> ❌ </td>
+                <td> ❌ </td>
+            </tr>
+            <tr>
+                <th> Premium </th>
+                <td> ✔ </td>
+                <td> ✔ </td>
+                <td> ❌ </td>
+            </tr>
+			<tr>
+				<th> Deluxe </th>
+				<td> ✔ </td>
+				<td> ✔ </td>
+				<td> ✔ </td>
+			</tr>
+        </tbody>
+    </table>
+
+</main>
+<footer>
+    <!-- Footer content -->
+</footer>
+</body>
+</html>
+
+
+
